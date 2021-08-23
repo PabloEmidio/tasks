@@ -26,5 +26,5 @@ class Task:
         self._description = description
         self.status = 'todo'
 
-    def add_status(self, status: str):
+    def add_status(self, status: str) -> None:
         self.status = status
