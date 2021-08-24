@@ -33,6 +33,10 @@ class TaskManager:
             raise TypeError(msg)
         self._tasks.append(task)
 
+    @property
+    def tasks(self) -> List[Task]:
+        return self._tasks[:]
+
     def __len__(self):
         return len(self._tasks)
 
