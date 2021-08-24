@@ -9,7 +9,5 @@ class StatusDescriptor:
 
     def __set__(self, obj, value):
         if not value.lower() in VALID_VALUES:
-            raise StatusError(
-                f'Valid values {VALID_VALUES}, given value \'{value.lower()}\''
-            )
+            raise StatusError('', value.lower())
         obj._status = value.lower()
