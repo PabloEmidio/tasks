@@ -5,12 +5,14 @@ import pytest
 from tasks.utils.models.task import Task
 from tasks.utils.exceptions import StatusError
 
+
 @pytest.fixture
-def task() -> None:
+def task() -> Task:
     return Task(Mock(), Mock())
 
+
 @pytest.mark.parametrize(
-    'is_valid_status, status', 
+    'is_valid_status, status',
     (
         (True, 'done'),
         (True, 'Done'),
