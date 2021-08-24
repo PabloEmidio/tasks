@@ -1,4 +1,9 @@
 from typing import List
 
 
-VALID_VALUES: List[str] = ['todo', 'doing', 'done', 'failed', ]
+VALID_VALUES: List[str] = [
+    'todo',
+    'doing',
+    'done',
+    'failed',
+]
