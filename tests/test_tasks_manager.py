@@ -1,3 +1,5 @@
+from unittest.mock import Mock
+
 import pytest
 
 from tasks.utils.models.task import (
@@ -16,7 +18,7 @@ def task_manager():
 @pytest.mark.parametrize(
     'is_valid_task, task',
     (
-        (True, Task('test', 'test')),
+        (True, Task(Mock(), Mock())),
         (False, 'Task()')
     )
 )
